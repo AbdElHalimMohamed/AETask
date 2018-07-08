@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="adapter_car_height">148dp</dimen>
+
+</resources>

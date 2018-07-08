@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/text_white</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColorSecondary">@color/text_white</item>
+    </style>
+
+    <style name="TextMedium.Primary" parent="TextMedium">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextMedium.Secondary" parent="TextMedium">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextMedium.Primary.SingleLine" parent="TextMedium.Primary">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextMedium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextBig">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextBig.Primary" parent="TextBig">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextBig.Price" parent="TextBig">
+        <item name="android:textColor">@color/price</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

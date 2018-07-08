@@ -1,0 +1,13 @@
+<resources>
+    <string name="unknown_error">Unknown error</string>
+    <string name="server_error">Server error</string>
+    <string name="network_error">Network error</string>
+    <string name="not_found_error">Resource not found</string>
+    <string name="empty_default">No data</string>
+    <string name="lot_num">رقم اللوط</string>
+    <string name="bids">العروض</string>
+    <string name="time_left">الوقت المتبقي</string>
+    <string name="car_title">%s %s %d</string>
+    <string name="car_list_title">عربات و الات</string>
+    <string name="pull_to_search">اسحب لأسفل للبحث</string>
+</resources>

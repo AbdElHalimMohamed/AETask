@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">AETask</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="server_error">Server error</string>
+    <string name="network_error">Network error</string>
+    <string name="not_found_error">Resource not found</string>
+    <string name="empty_default">No data</string>
+    <string name="lot_num">lot#</string>
+    <string name="bids">Bids</string>
+    <string name="time_left">Time left</string>
+    <string name="car_title">%s %s %d</string>
+    <string name="car_list_title">Cars &amp; Machinery</string>
+    <string name="pull_to_search">Scroll down to search</string>
+</resources>

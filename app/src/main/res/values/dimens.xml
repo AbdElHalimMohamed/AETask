@@ -2,5 +2,8 @@
 <resources>
 
     <dimen name="adapter_car_height">148dp</dimen>
+    <dimen name="filters_bg_height">28dp</dimen>
+    <dimen name="button_height">54dp</dimen>
+    <dimen name="filter_btn_width">96dp</dimen>
 
 </resources>

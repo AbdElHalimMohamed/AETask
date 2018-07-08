@@ -6,4 +6,6 @@ import com.halim.aetask.domain.entity.Car
 interface CarsListView : View {
 
     fun showCarsList(cars: List<Car>)
+
+    fun updateCarsList(cars: List<Car>)
 }

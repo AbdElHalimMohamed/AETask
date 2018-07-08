@@ -10,4 +10,14 @@
     <string name="car_title">%s %s %d</string>
     <string name="car_list_title">عربات و الات</string>
     <string name="pull_to_search">اسحب لأسفل للبحث</string>
+    <string name="filter">فرز</string>
+    <string name="sort">ترتيب</string>
+    <string name="grid_view">شبكة</string>
+    <string name="sort_by">ترتيب حسب</string>
+    <string name="year_asc">السنة الاقل للاكثر</string>
+    <string name="year_des">السنة الاكثر للاقل</string>
+    <string name="price_asc">السعر الاقل للاكثر</string>
+    <string name="price_des">السعر الاكثر للاقل</string>
+    <string name="end_date_asc">الوقت المتبقي الاقل للاكثر</string>
+    <string name="end_date_des">الوقت المتبقي الاكثر للاقل</string>
 </resources>

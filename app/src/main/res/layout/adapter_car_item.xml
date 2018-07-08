@@ -57,10 +57,10 @@
         <TextView
             android:id="@+id/lotNum"
             style="@style/TextMedium.Primary.SingleLine"
-            android:layout_marginEnd="4dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/lotDivider"
             app:layout_constraintStart_toStartOf="@+id/carTitle"
@@ -69,10 +69,12 @@
         <TextView
             android:id="@+id/lotNumTitle"
             style="@style/TextMedium.Secondary"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/lot_num"
             app:layout_constraintBottom_toTopOf="@+id/lotNum"
+            app:layout_constraintEnd_toStartOf="@+id/lotDivider"
             app:layout_constraintStart_toStartOf="@+id/lotNum" />
 
         <View
@@ -80,7 +82,6 @@
             android:layout_width="1dp"
             android:layout_height="0dp"
             android:background="@color/divider"
-            android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/lotNum"
             app:layout_constraintEnd_toStartOf="@+id/bidsCount"
             app:layout_constraintStart_toEndOf="@+id/lotNum"
@@ -90,8 +91,8 @@
             android:id="@+id/bidsCount"
             style="@style/TextMedium.Primary.SingleLine"
             android:layout_width="0dp"
-            android:layout_marginEnd="4dp"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             app:layout_constraintBaseline_toBaselineOf="@+id/lotNum"
             app:layout_constraintEnd_toStartOf="@id/bidsDivider"
             app:layout_constraintStart_toEndOf="@+id/lotDivider"
@@ -100,18 +101,19 @@
         <TextView
             android:id="@+id/bidsTitle"
             style="@style/TextMedium.Secondary"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/bids"
             app:layout_constraintBaseline_toBaselineOf="@+id/lotNumTitle"
             app:layout_constraintBottom_toTopOf="@+id/bidsCount"
+            app:layout_constraintEnd_toStartOf="@+id/bidsDivider"
             app:layout_constraintStart_toStartOf="@+id/bidsCount" />
 
         <View
             android:id="@+id/bidsDivider"
             android:layout_width="1dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="4dp"
             android:background="@color/divider"
             app:layout_constraintBottom_toBottomOf="@+id/lotDivider"
             app:layout_constraintEnd_toStartOf="@+id/timeLeft"
@@ -123,7 +125,7 @@
             style="@style/TextMedium.Primary.SingleLine"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
             app:layout_constraintBaseline_toBaselineOf="@+id/lotNum"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bidsDivider"
@@ -132,11 +134,13 @@
         <TextView
             android:id="@+id/timeLeftTitle"
             style="@style/TextMedium.Secondary"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/time_left"
             app:layout_constraintBaseline_toBaselineOf="@+id/lotNumTitle"
             app:layout_constraintBottom_toTopOf="@+id/timeLeft"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/timeLeft" />
 
     </android.support.constraint.ConstraintLayout>

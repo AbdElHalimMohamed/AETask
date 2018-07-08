@@ -11,4 +11,14 @@
     <string name="car_title">%s %s %d</string>
     <string name="car_list_title">Cars &amp; Machinery</string>
     <string name="pull_to_search">Scroll down to search</string>
+    <string name="filter">Filter</string>
+    <string name="sort">Sort</string>
+    <string name="grid_view">Grid View</string>
+    <string name="sort_by">Sort by</string>
+    <string name="year_asc">Year ASC</string>
+    <string name="year_des">Year DES</string>
+    <string name="price_asc">Price ASC</string>
+    <string name="price_des">Price DES</string>
+    <string name="end_date_asc">End-date ASC</string>
+    <string name="end_date_des">End-date DES</string>
 </resources>

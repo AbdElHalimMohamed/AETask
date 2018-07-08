@@ -10,8 +10,6 @@ import com.halim.aetask.domain.usecase.observer.SimpleDisposableObserver
 import com.halim.aetask.domain.view.CarsListView
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
-import java.text.SimpleDateFormat
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 
@@ -22,13 +20,42 @@ class CarsListPresenterImp(view: CarsListView,
 
     private var refreshInterval = 0L
     private var autoRefreshDisposable: Disposable? = null
+    private var cars: List<Car> = arrayListOf()
+    private var sortOption = CarsListPresenter.SortOption.END_DATE_ASC
 
     override fun bindView() {
         getCars(true)
     }
 
     override fun refreshCarsList() {
+        cars = arrayListOf()
         getCars(false)
+    }
+
+    override fun sortCarsList(option: CarsListPresenter.SortOption) {
+        if (sortOption != option) {
+            sortCars(option, true)
+        }
+    }
+
+    private fun sortCars(option: CarsListPresenter.SortOption, resetView: Boolean) {
+
+        val sortedList = when (option) {
+            CarsListPresenter.SortOption.PRICE_ASC -> cars.sortedBy { it.auctionInfo?.currentPrice }
+            CarsListPresenter.SortOption.PRICE_DES -> cars.sortedByDescending { it.auctionInfo?.currentPrice }
+            CarsListPresenter.SortOption.END_DATE_ASC -> cars.sortedBy { it.auctionInfo?.durationSec }
+            CarsListPresenter.SortOption.END_DATE_DES -> cars.sortedByDescending { it.auctionInfo?.durationSec }
+            CarsListPresenter.SortOption.YEAR_ASC -> cars.sortedBy { it.year }
+            CarsListPresenter.SortOption.YEAR_DES -> cars.sortedByDescending { it.year }
+        }
+
+        if (resetView) {
+            view?.showCarsList(sortedList)
+        } else {
+            view?.updateCarsList(sortedList)
+        }
+
+        sortOption = option
     }
 
     private fun getCars(showLoader: Boolean) {
@@ -42,10 +69,14 @@ class CarsListPresenterImp(view: CarsListView,
 
                     override fun onSuccess(data: CarsAuction) {
                         super.onSuccess(data)
+
+                        val resetView = cars.size != data.cars.size
+
                         refreshInterval = data.refreshIntervalSec
+                        cars = data.cars
 
                         setCarImageWidthAndHeight(data.cars)
-                        view?.showCarsList(data.cars)
+                        sortCars(sortOption, resetView)
 
                         autoRefreshCars()
                     }

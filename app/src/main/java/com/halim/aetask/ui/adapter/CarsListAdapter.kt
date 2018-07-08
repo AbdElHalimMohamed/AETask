@@ -58,7 +58,7 @@ class CarsListAdapter(cars: List<Car> = arrayListOf())
             val model: String
             val currency: String?
 
-            if (local?.contains("ar", true) == true) {
+            if (local?.equals("ar", true) == true) {
                 make = car.makeAr
                 model = car.modelAr
                 currency = car.auctionInfo?.currencyAr
